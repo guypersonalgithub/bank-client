@@ -1,0 +1,96 @@
+/* #menu {
+
+    text-align: center;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat (12,1fr);
+    grid-template-rows: 15% 85%;
+
+}
+
+#option {
+
+    height: 50px;
+
+}
+
+#menuButton {
+
+    width: 80%;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: rgb(230, 231, 237);
+
+}
+
+#menuButtonSelected {
+
+    overflow: auto;
+    width: 80%;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: rgb(244, 244, 242);
+    border-bottom: 3px solid rgb(232, 233, 237);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.5s;
+    color: rgb(185, 185, 222);
+
+}
+
+#menuButtonSelected:hover {
+
+    overflow: auto;
+    width: 80%;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: rgb(244, 244, 242);
+    border-bottom: 3px solid rgb(232, 233, 237);
+    box-shadow: none;
+    transition-duration: 0.5s;
+    color: rgb(185, 185, 222);
+    margin-top: 0.5em;
+
+
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 0px) {
+
+    #menuOptions {
+
+        margin-top: 70px;
+
+    }
+
+    #option {
+
+        float: left;
+
+    }
+
+    #menuButtonSelected {
+
+        width: 100%;
+        transition-duration: 0s;
+
+    }
+
+    #menuButton {
+
+        width: 100%;
+        transition-duration: 0s;
+
+    }
+
+    #option {
+
+        margin-left: 10px;
+
+    }
+
+} */

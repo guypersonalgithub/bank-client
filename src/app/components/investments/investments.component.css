@@ -1,0 +1,100 @@
+#investments, #activeInvestments {
+
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
+.investment {
+
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto 20%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    background-color: white;
+    /* border-radius: 1em; */
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgba(0, 0, 0, 0.19);
+    color: rgb(208, 58, 104);
+    font-weight: bold;
+
+}
+
+.invest {
+
+    text-align: center;
+    background-color: rgb(208, 58, 104);
+    border: none;
+    border-radius: 1em;
+    color: white;
+    padding: 0.5em;
+    font-weight: bold;
+    padding-left: calc(5vw * 1.5);
+    padding-right: calc(5vw * 1.5);
+    cursor: pointer;
+    transition-duration: 0.5s; 
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.invest:hover {
+
+    background-color: white;
+    /* border: 1px solid white; */
+    color: rgb(0, 99, 180);
+    padding-left: calc(5vw * 1.5);
+    padding-right: calc(5vw * 1.5);
+    transition-duration: 0.5s;
+
+}
+
+.endInvestment {
+
+    text-align: right;
+    background-color: rgb(208, 58, 104);
+    border: none;
+    border-radius: 1em;
+    color: white;
+    padding: 0.5em;
+    font-weight: bold;
+    padding-left: calc(5vw * 1.5);
+    padding-right: calc(5vw * 1.5);
+    cursor: pointer;
+    transition-duration: 0.5s; 
+    /* margin: 0 auto; */
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.endInvestment:hover {
+
+    background-color: white;
+    /* border: 1px solid white; */
+    color: rgb(0, 99, 180);
+    padding-left: calc(5vw * 1.5);
+    padding-right: calc(5vw * 1.5);
+    transition-duration: 0.5s; 
+
+}
+
+.investmentHeader {
+
+    color: rgb(208, 58, 104);
+    font-size: 2em;
+    font-weight: bold;
+
+}
+
+.currency {
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: rgb(208, 58, 104);
+    font-size: 1.2em;
+    font-weight: bold; 
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgba(0, 0, 0, 0.19);
+}

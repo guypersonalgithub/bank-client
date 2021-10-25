@@ -1,0 +1,72 @@
+#coinValues {
+
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3em;
+
+}
+
+#coinValuesHeader {
+
+    color: rgb(208, 58, 104);
+    font-weight: bold;
+    margin-left: 45px;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgb(208, 58, 104);
+
+}
+
+#coins {
+
+    /* display: grid;
+    grid-template-columns: auto auto; */
+    border-radius: 0.5em;
+    /* border: 1px solid black; */
+    overflow: auto;
+
+}
+
+.coinHeader {
+
+    /* background-color:rgb(208, 58, 104); */
+    color: rgb(208, 58, 104);
+    font-size: 1.5em;
+    /* padding-left: 5px; */
+
+}
+
+.coinHeader2 {
+
+    /* background-color:rgb(208, 58, 104); */
+    color: rgb(208, 58, 104);
+    font-size: 1.5em;
+    /* padding-left: 5px; */
+    /* border-left: 1px solid white */
+
+}
+
+.coinContainer {
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+#pickedCoin {
+
+    color: rgb(208, 58, 104);
+    font-size: 0.8em;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    float: right;
+
+}
+
+.selectOptions {
+
+    background-color: white;
+    font-weight: bold;
+
+}

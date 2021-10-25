@@ -1,0 +1,320 @@
+#account {
+
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 0em;
+
+}
+
+#accountHeader {
+
+    color: rgb(208, 58, 104);
+    font-weight: bold;
+    font-size: 2em;
+    margin-left: 45px;
+    margin-bottom: 1.5em;
+
+}
+
+#accountOptions {
+
+    margin-left: 45px; 
+    color: rgb(208, 58, 104);
+    font-weight: bold;
+
+}
+
+.optionIcon {
+
+    float: left;
+    margin-top: 3px;
+    margin-right: 3px;
+
+}
+
+.optionText {
+
+    float: left;
+
+}
+
+#secondColor {
+
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    padding-top: 20em;
+    background-color: rgb(235, 239, 242);
+    padding-bottom: 3em;
+    z-index: -1;
+
+}
+
+#funds {
+
+    background-color: white;
+    border-radius: 1em;
+    width: 60%;
+    margin: 0 auto;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.categoryHeader {
+
+    color: rgb(208, 58, 104);
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+
+}
+
+#fundsArea {
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+.amount {
+
+    color: rgb(208, 58, 104);
+    font-weight: bold;
+    font-size: 3em;
+    margin-left: 20px;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+
+}
+
+.type {
+
+    color: rgb(208, 58, 104);
+    font-size: 1em;
+    margin-left: 20px;
+    margin-bottom: 1.5em;
+}
+
+.currencyContainer1, .currencyContainer2, .currencyContainer3 {
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.19);
+
+}
+
+.currencyContainer1, .currencyContainer2, .currencyContainer4 {
+
+    border-right: 1px solid rgba(0, 0, 0, 0.19);
+
+}
+
+#pickedCoin {
+
+    color: rgb(208, 58, 104);
+    font-size: 0.8em;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    float: right;
+
+}
+
+.selectOptions {
+
+    background-color: white;
+    font-weight: bold;
+
+}
+
+#convertCurrency {
+
+    background-color: white;
+    border-radius: 1em;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 3em;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.exchangeOption {
+
+    color: rgb(208, 58, 104);
+    font-size: 1em;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: calc(16vh * 1.5) auto;
+    margin-left: 20px;
+
+}
+
+.exchangeInputs {
+
+    margin-top: 1em;
+    width: 80%;
+    position: relative;
+    top: -20%;
+    margin-bottom: 1em;
+    border: none;
+    padding: 0.5em;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgba(0, 0, 0, 0.19);
+    outline: none;
+    color: rgb(0, 99, 180);
+
+}
+
+.exchangeInputs:hover {
+
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgb(0, 99, 180);
+
+}
+
+.exchangeInputs:focus {
+
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgb(0, 99, 180);
+
+}
+
+.confirm {
+
+    text-align: center;
+    background-color: rgb(208, 58, 104);
+    border: none;
+    border-radius: 1em;
+    color: white;
+    padding: 0.5em;
+    font-weight: bold;
+    padding-left: calc(3vw * 1.5);
+    padding-right: calc(3vw * 1.5);
+    cursor: pointer;
+    transition-duration: 0.5s; 
+    margin: 0 auto;
+    margin-bottom: 2em;
+
+}
+
+.confirm:hover {
+
+    background-color: white;
+    color: rgb(0, 99, 180);
+    padding-left: calc(5vw * 1.5);
+    padding-right: calc(5vw * 1.5);
+    transition-duration: 0.5s;
+
+}
+
+.exchangeSubmit {
+
+    margin-top: 1em;
+    display: grid;
+
+}
+
+.here {
+
+    color: rgb(208, 58, 104);
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.exchanges {
+
+    color: rgb(208, 58, 104);
+    font-size: 0.8em;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 0px) {
+
+    #fundsArea {
+
+        display: grid;
+        grid-template-columns: auto auto;
+    
+    }
+
+    .currencyContainer2 {
+
+        border-right: none;
+
+    }
+
+    .currencyContainer4 {
+
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.19);
+
+    }
+
+    .currencyContainer3 {
+
+        border-right: 1px solid rgba(0, 0, 0, 0.19);
+
+    }
+
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 0px) {
+
+    #funds {
+
+        width: 80%;
+
+    }
+
+    #convertCurrency {
+
+        width: 80%;
+
+    }
+
+}
+
+@media only screen and (max-width: 850px) and (min-width: 0px) {
+
+    #funds {
+
+        width: 90%;
+
+    }
+
+    #convertCurrency {
+
+        width: 90%;
+
+    }
+
+}
+
+@media only screen and (max-width: 750px) and (min-width: 0px) {
+  
+    #fundsArea {
+
+        display: grid;
+        grid-template-columns: auto;
+    
+    }
+
+    .currencyContainer1, .currencyContainer3 {
+
+        border-right: none;
+
+    }
+
+}
+
+@media only screen and (max-width: 400px) and (min-width: 0px) {
+  
+    .amount {
+
+        font-size: 2em;
+
+    }
+
+}

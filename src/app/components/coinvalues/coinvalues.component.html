@@ -1,0 +1,38 @@
+<div id = "coinValues">
+
+    *developer note - since this is just a demo, and exchange APIs request money beyond a certain threshold, the values used in this project are mocked.
+
+    <div id = "coinValuesHeader">
+
+        Coin Values:
+
+        <select id="pickedCoin" #pickedCoinInput="ngModel" name="pickedCoin" required (ngModelChange)="pickCoin($event)" [(ngModel)]="currentCoin">
+            <option class= "selectOptions" *ngFor = "let option of options; let i = index" value = {{option}}>
+                {{option}}
+            </option>
+        </select>
+    </div>
+
+    <div id = "coins">
+
+        <div class = "coinContainer" *ngFor = "let coin of currentValues; let i = index">
+
+            <ng-template [ngIf] = "i == 0">
+
+                <div class = "coinHeader">{{coin[0]}}</div>
+                <div class = "coinHeader2">{{coin[1]}}</div>
+
+            </ng-template>
+
+            <ng-template [ngIf] = "i > 0">
+
+                <div class = "coinName">{{coin[0]}}</div>
+                <div class = "coinRates">{{coin[1]}}</div>
+
+            </ng-template>
+
+        </div>
+
+    </div>
+
+</div>

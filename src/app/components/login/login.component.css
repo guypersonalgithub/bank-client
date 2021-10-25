@@ -1,0 +1,313 @@
+#login {
+
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    border-radius: 1em;
+    margin-top: 3em;
+    transition-duration: 1s;
+    min-height: calc(100vh - 526px);
+    height: 100%;
+
+}
+
+#signup {
+
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    border-radius: 1em;
+    margin-top: 3em;
+    transition-duration: 1s;
+    min-height: calc(100vh - 526px);
+    height: 100%;
+
+}
+
+#loginHeader {
+
+    margin-bottom: 35px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgb(0, 99, 180);
+
+}
+
+#signupHeader {
+
+    margin-bottom: 35px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+
+}
+
+.inputHeader {
+
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(0, 99, 180);
+
+}
+
+.signupHeader {
+
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+
+}
+
+.loginInputs {
+
+    width: 100%;
+    margin-bottom: 1em;
+    border: none;
+    padding: 0.5em;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgba(0, 0, 0, 0.19);
+    outline: none;
+    color: rgb(0, 99, 180);
+
+}
+
+.loginInputs:hover {
+
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgb(0, 99, 180);
+
+}
+
+.loginInputs:focus {
+
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgb(0, 99, 180);
+
+}
+
+.registrationInputs {
+
+    width: 100%;
+    background: transparent;
+    margin-bottom: 1em;
+    border: none;
+    padding: 0.5em;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 rgba(0, 0, 0, 0.19);
+    outline: none;
+    color: white;
+
+}
+
+.registrationInputs:hover {
+
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 white;
+
+}
+
+.registrationInputs:focus {
+
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 0px 0 white;
+
+}
+
+.registrationInputs::placeholder {
+    color: white;
+    opacity: 1; 
+  }
+  
+  .registrationInputs:-ms-input-placeholder {
+    color: white;
+  }
+  
+  .registrationInputs::-ms-input-placeholder {
+    color: white;
+  }
+
+.registrationSubmit {
+
+    margin-top: 3em;
+    margin-bottom: 3em;
+
+}
+
+.submit {
+
+    text-align: center;
+    background-color: rgb(0, 99, 180);
+    border: none;
+    border-radius: 1em;
+    color: white;
+    padding: 0.5em;
+    font-weight: bold;
+    padding-left: calc(3vw * 1.5);
+    padding-right: calc(3vw * 1.5);
+    cursor: pointer;
+    transition-duration: 0.5s;
+    margin: auto;
+
+}
+
+.submit:hover {
+
+    background-color: white;
+    color: rgb(0, 99, 180);
+    padding-left: calc(5vw * 1.5);
+    padding-right: calc(5vw * 1.5);
+    transition-duration: 0.5s;
+
+}
+
+#loginForm {
+
+    width: 50%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+#loginContainer {
+
+    width: 50%;
+    transition-duration: 1s;
+    box-shadow: 0 0 0 0 rgba(232, 233, 237), 0 16px 60px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1em 0 0 1em;
+
+}
+
+#loginExplanation {
+
+    width: 50%;
+    background-image: linear-gradient(to left, rgb(0, 128, 233), rgb(0, 99, 180));
+    border-radius: 0 1em 1em 0;
+    transition-duration: 1s;
+    margin-left: auto;
+    box-shadow: 0 0 0 0 rgba(232, 233, 237), 0 16px 60px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#signupExplanation {
+
+    width: 100%;
+    background-image: linear-gradient(to left, rgb(0, 128, 233), rgb(0, 99, 180));
+    border-radius: 1em;
+    transition-duration: 1s;
+    margin-left: auto;
+
+}
+
+#loginTextHeader {
+
+    text-align: center;
+    color: white;
+    margin-top: 3em;
+    font-size: 2.5em;
+
+}
+
+#loginText {
+
+    text-align: center;
+    color: white;
+    margin-top: 1em;
+
+}
+
+#signupButton {
+
+    margin-top: 2em;
+    text-align: center;
+
+}
+
+.signup {
+
+    text-align: center;
+    background-color: white;
+    border: none;
+    border-radius: 1em;
+    color: rgb(0, 99, 180);
+    font-weight: bold;
+    padding: 0.5em;
+    padding-left: calc(3vw * 1.5);
+    padding-right: calc(3vw * 1.5);
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+}
+
+.signup:hover {
+
+    background: transparent;
+    color: white;
+    padding-left: calc(5vw * 1.5);
+    padding-right: calc(5vw * 1.5);
+    transition-duration: 0.5s;
+    
+}
+
+#signupContainer {
+
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    border-radius: 1em;
+    margin-top: 3em;
+    transition-duration: 1s;
+    min-height: calc(100vh - 526px);
+    height: 100%;
+
+}
+
+#signupForm {
+
+    background-image: linear-gradient(to left, rgb(0, 128, 233), rgb(0, 99, 180));
+    width: 100%;
+    border-radius: 1em;
+    height: 100%;
+
+}
+
+#signupArea {
+
+    width: 50%;
+    padding-top: 1em;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 0px) {
+
+    #login {
+
+        display: grid;
+
+    }
+
+    #signup {
+
+        display: grid;
+
+    }
+
+    #loginContainer {
+
+        width: 100%;
+        border-radius: 1em 1em 0 0;
+
+    }
+
+    #loginExplanation {
+
+        width: 100%;
+        border-radius: 0 0 1em 1em;
+        padding-bottom: 8em;
+
+    }
+
+}

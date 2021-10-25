@@ -1,0 +1,349 @@
+#miniMenu {
+
+    text-align: center;
+    margin-top: -6em;
+    z-index: 2;
+    position: relative;
+    height: 14em;
+    display: flex;
+    justify-content: center;
+
+}
+
+#miniMenuOptions {
+
+    margin-top: 1em;
+    background-color: white;
+    z-index: 2;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0 0 rgba(232, 233, 237), 0 26px 28px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    margin-bottom: 1em;
+    transition: 0.5s;
+    height: 8.5em;
+
+}
+
+#miniMenuOption {
+
+    height: 10em;
+    width: 10em;
+
+}
+
+#miniMenuOptionPicked{
+
+    background-color: rgb(71, 71, 230);
+    height: 10em;
+    width: 10em;
+    padding-top: 1em;
+    margin-top: -1em;
+    margin-left: 0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    position:relative;
+    border-radius: 0.5em;
+
+}
+
+#miniMenuIcon {
+
+    position: relative;
+    top: 15%;
+    color: rgb(209, 209, 209);
+    opacity: 0.6;
+    height: 25%;
+    width: 25%;
+    margin: 0 auto;
+
+}
+
+#miniMenuIconPicked {
+
+    position: relative;
+    top: 15%;
+    color: rgb(255, 255, 255);
+    height: 25%;
+    width: 25%;
+    margin: 0 auto;
+
+}
+
+#miniMenuText {
+
+    margin-top: 2em;
+    font-weight: bold;
+    color: rgb(58, 58, 167);
+    font-size: 1.3em;
+
+}
+
+#miniMenuTextPicked {
+
+    margin-top: 2em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+
+}
+
+#seperator {
+
+    height: 4em;
+    width: 0.3em;
+    position: relative;
+    top: 25%;
+    background-color: rgb(209, 209, 209);
+    opacity: 0.6;
+    border-radius: 0.5em;
+
+}
+
+#firstSection {
+
+    padding-bottom: 5em;
+
+}
+
+#sections {
+
+    display: grid;
+    grid-template-rows: 500px auto;
+
+}
+
+#part1 {
+
+    width: 100%;
+    position: absolute;
+
+}
+
+#firstPartText {
+
+    color: rgb(146, 146, 146);
+    overflow: hidden;
+
+}
+
+#innerText {
+
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-right: 1em;
+    padding-right: 2em;
+    min-width: 200px;
+
+}
+
+#secondSection {
+
+    padding-top: 2em;
+    background-color: rgb(235, 239, 242);
+    padding-bottom: 3em;
+
+}
+
+#contactUs {
+
+    position: relative;
+    top: 10%;
+    width: 60%;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    margin: 0 auto;
+
+}
+
+#contactUsTitle {
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    color: rgb(187, 187, 187);
+
+}
+
+#innerContactUs {
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+
+}
+
+#iconText {
+
+    margin-top: 0.5em;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(187, 187, 187);
+
+}
+
+#iconBorder {
+
+    display: grid;
+    grid-template-rows: 10% 90%;
+    text-align: center;
+    padding-top: 1em;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(187, 187, 187);
+
+}
+
+#iconBorder:hover {
+
+    background-color: rgb(202, 202, 202);
+    color: white;
+
+}
+
+#innerContactText {
+
+    margin-top: 2em;
+
+}
+
+#miniMenuIcons {
+
+    width: 10%;
+    height: 15%;
+    color: red;
+
+}
+
+@media only screen and (max-width: 1050px) and (min-width: 0px) {
+
+    #secondSection {
+
+        padding-bottom: 2em;
+    
+    }
+
+    #innerContactIcon {
+
+        left: 5px;
+        top: -10px;
+        position: relative;
+        
+    }
+
+    #iconBorder {
+
+        grid-template-columns: 10% 10%;
+
+    }
+    
+    #innerContactText {
+
+        margin-top: 0;
+        padding-left: 2em;
+
+    }
+
+    #innerContactUs {
+
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 100%;
+    
+    }
+
+    #contactUs {
+
+        grid-template-rows: 10% 90%;
+        padding-bottom: 3em;
+    
+    }
+
+}
+
+@media only screen and (max-width: 825px) and (min-width: 0px) {
+
+    #miniMenuOption {
+
+        width: calc(12vw * 1.5);
+        height: 10em;
+        min-width: 50px;
+
+    }
+
+    #miniMenuOptionPicked {
+
+        width: calc(12vw * 1.5);
+        min-width: 50px;
+
+    }
+
+    #miniMenuIcon {
+
+        width: 30%;
+
+    }
+
+    #miniMenuIconPicked {
+
+        width: 30%;
+
+    }
+
+}
+
+@media only screen and (max-width: 600px) and (min-width: 0px) {
+
+
+    #miniMenuIcon {
+
+        width: 40%;
+
+    }
+
+    #miniMenuIconPicked {
+
+        width: 40%;
+
+    }
+
+}
+
+@media only screen and (max-width: 445px) and (min-width: 0px) {
+
+    #contactUs {
+
+        grid-template-rows: 20% 80%;
+        padding-bottom: 3em;
+
+    }
+
+    #miniMenuIcon {
+
+        width: 50%;
+
+    }
+
+    #miniMenuIconPicked {
+
+        width: 50%;
+
+    }
+
+}
+
+@media only screen and (max-width: 400px) and (min-width: 0px) {
+
+    #miniMenuIcon {
+
+        width: 60%;
+
+    }
+
+    #miniMenuIconPicked {
+
+        width: 60%;
+
+    }
+
+}

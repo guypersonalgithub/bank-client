@@ -1,0 +1,324 @@
+#header {
+
+    display: grid;
+    grid-template-rows: 100%;
+    height: 500px;
+    overflow: hidden;
+
+}
+
+#header > * {
+
+    grid-column-start: 1;
+    grid-row-start: 1;
+
+}
+
+#headerBackground {
+
+    background-size: 100% 100%;
+    background-image: url("../../../assets/logo.jpeg");
+    background-repeat: no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+
+}
+
+#headerShadow {
+
+    background-color: black;
+    z-index: 2;
+    opacity: 0.5;
+
+}
+
+#middleHeader {
+
+    text-align: center;
+    margin-top: 15em;
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+
+}
+
+#smallHeader {
+
+    font-size: 1.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+
+}
+
+#bigHeader {
+
+    font-size: 2em;
+    text-transform: uppercase;
+
+}
+
+#headerButton {
+
+    width: 8%;
+    min-width: 153px;
+    padding: 0.6em;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(230, 231, 237);
+    border-radius: 1em;
+    color: rgb(46, 56, 201);
+    border: 1px solid white;
+    font-size: 1em;
+    transition-duration: 0.5s;
+    top: 0%;
+    position: relative;
+
+}
+
+#headerButton:hover {
+
+    width: 203px;
+    transition-duration: 0.2s;
+    top: -3%;
+    position: relative;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 10px 0px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#headerButtons {
+
+    z-index: 2;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 7em;
+
+}
+
+#headerDivider {
+
+    border-radius: 0.5em;
+    height: 5px;
+    width: 80%;
+    background-color: rgb(35, 155, 196);
+    z-index: 2;
+    margin: 0 auto;
+    margin-top: 6em;
+
+}
+
+#navHeaderButton {
+
+    position: relative;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: white;
+    font-size: 1.5em;
+    text-align: left;
+    margin-right: 10%;
+    transition: 0.5s;
+
+}
+
+#navHeaderButtonFinal {
+
+    position: relative;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: white;
+    font-size: 1.5em;
+    text-align: left;
+    transition: 0.5s;
+
+}
+
+#navHeaderButtonFinal:hover {
+
+    color: rgb(35, 155, 196);
+    border-bottom: 5px solid rgb(35, 155, 196);
+    border-radius: 0.5em;
+    transition: 0.5s;
+
+}
+
+#navHeaderButton:hover {
+
+    color: rgb(35, 155, 196);
+    border-bottom: 5px solid rgb(35, 155, 196);
+    border-radius: 0.5em;
+    transition: 0.5s;
+
+}
+
+#logo {
+
+    width: 80%;
+    margin: 0 auto;
+    z-index: 2;
+    color: white;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 50px auto 50px;    
+
+}
+
+#logoText {
+
+    font-size: 3em;
+    top: 5%;
+    position: relative;
+
+}
+
+#logoIcon {
+
+    top: 5%;
+    position: relative;
+    margin-right: 1em;
+
+}
+
+#menuButton {
+
+    float: right;
+    visibility: hidden;
+
+}
+
+#menu {
+
+    background-image: linear-gradient(to bottom, rgb(23, 55, 80), rgb(48, 41, 57));
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: calc(20vw * 1.5);
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+    display: block;
+    filter: grayscale(50%);
+
+}
+
+#menuShader {
+
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 999;
+
+}
+
+#menuTitle {
+
+    color: white;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: auto;
+    overflow: hidden;
+
+}
+
+#menuTitleText {
+
+    font-weight: bold;
+    font-size: 3em;
+    float: left;
+    margin-left: 10px;
+
+}
+
+#menuIcon {
+
+    overflow: auto;
+    float: left;
+
+}
+
+.menuButton {
+
+    width: 100%;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: white;
+    font-size: 1.5em;
+    text-align: left;
+    text-shadow: 2px 2px #22629e;
+
+}
+
+.menuButton:hover {
+
+    color: rgb(35, 155, 196);
+
+}
+
+@media only screen and (max-width: 1320px) and (min-width: 0px) {
+
+    #headerButtons {
+
+        display: none;
+
+    }
+
+    #menuButton {
+
+        visibility: visible;
+        top: 5%;
+        position: relative;
+
+    }
+
+    #middleHeader {
+
+        margin-top: 10em;
+
+    }
+
+ }
+
+ @media only screen and (max-width: 750px) and (min-width: 0px) {
+
+    #menu {
+
+        width: calc(25vw * 1.5);
+
+    }
+
+ }
+
+ @media only screen and (max-width: 575px) and (min-width: 0px) {
+
+    #menu {
+
+        width: calc(50vw * 1.5);
+
+    }
+
+ }
+
+ @media only screen and (max-width: 320px) and (min-width: 0px) {
+
+    #menu {
+
+        width: calc(50vw * 1.5);
+
+    }
+
+ }

@@ -1,0 +1,67 @@
+section {
+
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat (12,1fr);
+    /* grid-template-rows: 15% 80% 5%; */
+    min-width: 300px;
+    overflow: hidden;
+
+}
+
+footer, main, header {
+
+    color: black;
+    grid-column: span 12;
+
+}
+
+main {
+
+    min-height: calc(100vh - 626px);
+    /* height: calc(100% -600px); */
+    /* background-color: red; */
+    /* grid-column: span 12; */
+    /* height: 100%;
+    grid-column: span 12;
+    background-color: rgb(230, 231, 237);
+    display: grid;
+    grid-template-columns: 18% 82%;
+    border-left: 3px solid rgba(222, 223, 227);
+    border-right: 3px solid rgba(222, 223, 227);
+    border-top: 3px solid rgba(222, 223, 227);
+    border-radius: 1em 1em 0 0; */
+
+}
+
+header {
+
+    /* background-color: rgb(230, 231, 237);
+    border-top: 3px solid rgba(222, 223, 227);
+    border-left: 3px solid rgba(222, 223, 227);
+    border-right: 3px solid rgba(222, 223, 227);
+    border-radius: 1em 1em 0 0; */
+
+}
+
+footer {
+
+    /* background: rgb(230, 231, 237);
+    border-bottom: 3px solid rgba(222, 223, 227);
+    border-left: 3px solid rgba(222, 223, 227);
+    border-right: 3px solid rgba(222, 223, 227);
+    border-radius: 0 0 1em 1em; */
+
+}
+/* 
+@media only screen and (max-width: 1000px) and (min-width: 0px) {
+
+    main {
+
+
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 80%;
+
+    }
+
+} */

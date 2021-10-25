@@ -1,0 +1,230 @@
+<div id = "account">
+
+    <div id = "accountHeader">
+
+        Welcome {{ username }}!
+
+    </div>
+
+    <div id = "funds">
+
+        <div class = "categoryHeader">
+
+            You currently have: {{ currentAmountOfFunds }}
+
+            <ng-template [ngIf] = "currentCoin == 'Dollar'">
+                $
+            </ng-template>
+            <ng-template [ngIf] = "currentCoin == 'Shekel'">
+                ₪
+            </ng-template>
+            <ng-template [ngIf] = "currentCoin == 'Euro'">
+                €
+            </ng-template>
+            <ng-template [ngIf] = "currentCoin == 'Yen'">
+                ¥
+            </ng-template>
+            <ng-template [ngIf] = "currentCoin == 'Pound'">
+                £
+            </ng-template>
+
+
+            <select id="pickedCoin" #pickedCoinInput="ngModel" name="pickedCoin" required (ngModelChange)="pickCurrency($event)" [(ngModel)]="currentCoin">
+                <option class= "selectOptions" *ngFor = "let option of options; let i = index" value = {{option}}>
+                    {{option}}
+                </option>
+            </select>
+
+        </div>
+
+        <div id = "fundsArea">
+
+            <div class = "currencyContainer1">
+
+                <div class = "amount">
+
+                    {{ currency.dollar }}$
+
+                </div>
+
+                <div class = "type">
+
+                    Dollar
+
+                </div>
+
+            </div>
+
+            <div class = "currencyContainer2">
+
+                <div class = "amount">
+
+                    {{ currency.shekel }}₪
+
+                </div>
+
+                <div class = "type">
+
+                    Shekel
+
+                </div>
+
+            </div>
+
+            <div class = "currencyContainer3">
+
+                <div class = "amount">
+
+                    {{ currency.euro }}€
+
+                </div>
+
+                <div class = "type">
+
+                    Euro
+
+                </div>
+
+            </div>
+
+            <div class = "currencyContainer4">
+
+                <div class = "amount">
+
+                    {{ currency.yen }}¥
+
+                </div>
+
+                <div class = "type">
+
+                    Yen
+
+                </div>
+
+            </div>
+
+            <div class = "currencyContainer5">
+
+                <div class = "amount">
+
+                    {{ currency.pound }}£
+
+                </div>
+
+                <div class = "type">
+
+                    Pound
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id = "convertCurrency">
+        
+        <div class = "categoryHeader">
+            Convert currency:
+
+            <!-- <select id="pickedCoin" #pickedCoinInput="ngModel" name="currencyForExchange" required (ngModelChange)="pickCurrencyForExchange($event)" [(ngModel)]="currentCoinForExchange">
+                <option class= "selectOptions" *ngFor = "let option of options; let i = index" value = {{option}}>
+                    {{option}}
+                </option>
+            </select> -->
+
+        </div>
+
+        Make sure to check the current coin exchange rates <button class="here" (click)="toRates()">Here</button><br><br>
+
+        <div>
+
+            Exchange from 
+
+            <select class="exchanges" #pickedCoinInput="ngModel" name="currencyForExchange" required (ngModelChange)="pickCurrencyForExchange($event)" [(ngModel)]="exchangeCurrency.exchangeFromCurrency">
+                <option class= "selectOptions" *ngFor = "let option of options; let i = index" value = {{option}}>
+                    {{option}}
+                </option>
+            </select>
+
+            to
+
+            <select class="exchanges" #pickedCoinInput="ngModel" name="currencyForExchange" required (ngModelChange)="pickCurrencyToExchangeTo($event)" [(ngModel)]="exchangeCurrency.exchangeToCurrency">
+                <option class= "selectOptions" *ngFor = "let option of options; let i = index" value = {{option}}>
+                    {{option}}
+                </option>
+            </select>
+
+            <input class="exchangeInputs" #exchangeInputs="ngModel" type="text" placeholder="Type the amount" (input) = "calculateExpectedExchange()" [(ngModel)]="exchangeCurrency.exchangeAmount">
+
+            <ng-template [ngIf] = "exchangeCurrency.exchangeFromCurrency || exchangeCurrency.exchangeToCurrency || this.exchangeCurrency.exchangeAmount && this.exchangeCurrency.exchangeAmount != 0">
+                <div id = "finalResult">
+                    I would like to exchange
+                    
+                    <ng-template [ngIf] = "!(this.exchangeCurrency.exchangeAmount! > 0)">
+
+                        _
+
+                    </ng-template>
+
+                    <ng-template [ngIf] = "this.exchangeCurrency.exchangeAmount! > 0">
+
+                        {{ exchangeCurrency.exchangeAmount }} 
+
+                    </ng-template>
+                    {{ exchangeCurrency.exchangeFromCurrency }}(s) for {{ exchangeCurrency.exchangeToCurrency }}(s). <br/>
+                    Amount of {{ exchangeCurrency.exchangeToCurrency }} I would receive: {{ expectedAmountToReceive }}
+                </div>
+            </ng-template>
+
+        </div>
+
+        <!-- <div *ngFor = "let option of options; let i = index">
+
+            <ng-template [ngIf] = "option != currentCoinForExchange">
+
+                <div class = "exchangeOption">
+
+                    From {{ currentCoinForExchange }} to {{ option }}:
+                    <input class="exchangeInputs" type="text" placeholder="Type the amount">
+
+                </div>
+
+            </ng-template>
+
+        </div> -->
+
+        <div class = "exchangeSubmit">
+
+            <button class="confirm" (click)="confirmExchange()">Confirm</button>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+    <!-- <div id = "accountOptions">
+
+        <div class = "optionIcon">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"/>
+                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+
+        </div>
+
+        <div class = "optionText">
+
+            change password
+
+        </div>
+
+    </div> -->
+
+<div id = "secondColor">
+
+</div>

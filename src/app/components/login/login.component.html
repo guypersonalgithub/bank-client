@@ -1,0 +1,117 @@
+<ng-template [ngIf] = "state != 'signupForm' && state != 'disabled'">
+
+<div id = {{state}}>
+
+    <ng-template [ngIf] = "state == 'login'">
+
+        <div id = "loginContainer" @loginExplanation>
+
+            <div id= "loginForm">
+        
+                <div id="loginHeader">
+            
+                    Login
+            
+                </div>
+                <div class="inputHeader">
+            
+                    Username
+            
+                </div>
+                <input class="loginInputs" #usernameInput="ngModel" type="text" placeholder="Type your username"
+                    [(ngModel)]="userLoginDetails.username">
+                <br />
+                <div class="inputHeader">
+            
+                    Password
+            
+                </div>
+                <input class="loginInputs" #passwordInput="ngModel" type="text" placeholder="Type your password"
+                    [(ngModel)]="userLoginDetails.password">
+                <br />
+            
+                <div class="registrationSubmit">
+            
+                    <button class="submit" (click)="login()">Submit</button>
+            
+                </div>
+            
+            </div>
+    
+        </div>
+        
+        <div id= "loginExplanation" @signupExplanation>
+            
+            <div id="loginTextHeader">
+            
+                Not registered?
+            
+            </div>
+            
+            <div id="loginText">
+            
+                Sign up now and get 5000 fake dollars for personal testing!
+            
+            </div>
+            
+            <div id="signupButton">
+            
+                <button class="signup" (click)="enterSignup()">Signup</button>
+            
+            </div>
+            
+        </div>
+
+    </ng-template>
+
+</div>
+
+</ng-template>
+
+<ng-template [ngIf] = "state == 'signupForm'">
+
+    <div id = "signupContainer">
+
+        <ng-template [ngIf] = "secondaryState == 'signup'">
+
+            <div id = "signupForm" @signupForm>
+                
+                <div id= "signupArea">
+        
+                    <div id="signupHeader">
+                
+                        Signup
+                
+                    </div>
+                    <div class="signupHeader">
+                
+                        Username
+                
+                    </div>
+                    <input class="registrationInputs" #usernameInput="ngModel" type="text" placeholder="Type your username"
+                        [(ngModel)]="userLoginDetails.username">
+                    <br />
+                    <div class="signupHeader">
+                
+                        Password
+                
+                    </div>
+                    <input class="registrationInputs" #passwordInput="ngModel" type="text" placeholder="Type your password"
+                        [(ngModel)]="userLoginDetails.password">
+                    <br />
+                    <div class="registrationSubmit">
+                
+                        <button class="submit" (click)="signup()">Signup</button>
+                        <button class="signup" (click)="enterLogin()">Back</button>
+                
+                    </div>
+                
+                </div>
+        
+            </div>
+
+        </ng-template>    
+
+    </div>
+
+</ng-template>

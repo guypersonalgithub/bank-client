@@ -1,0 +1,161 @@
+<div id = "investments">
+
+    <div class = "investmentHeader">
+
+        Savings
+
+    </div>
+
+    <div class = "currency">
+
+        Dollars: {{ currency.dollar }}
+
+    </div>
+
+    <div class = "currency">
+
+        Shekels: {{ currency.shekel }}
+
+    </div>
+
+    <div class = "currency">
+
+        Euros: {{ currency.euro }}
+
+    </div>
+
+    <div class = "currency">
+
+        Yen: {{ currency.yen }}
+
+    </div>
+
+    <div class = "currency">
+
+        Pound: {{ currency.pound }}
+
+    </div>
+
+    <div class = "investmentHeader">
+
+        Options
+
+    </div>
+
+    <div class = "investment" *ngFor = "let investment of investments; let i = index">
+        
+        <div class = "investmentName">
+
+            Investment type: {{ investment.investment_name }}
+
+        </div>
+
+        <div class = "investmentSum">
+
+            Sum required: {{ investment.required_sum }}
+
+        </div>
+
+        <div class = "investmentDuration">
+
+            Duration: {{ investment.investment_duration }} minutes
+
+        </div>
+
+        <div class = "investmentType">
+
+            Type: {{ investment.required_type }}
+
+        </div>
+
+        <div class = "investmentGrowth">
+
+            Potential growth: {{ investment.potential_growth_percentage }}%
+
+        </div>
+
+        <button class = "invest" (click)="invest(i)">Invest</button>
+
+    </div>
+
+</div>
+
+<div id = "activeInvestments">
+
+    <div class = "investmentHeader">
+
+        Active Investments
+
+    </div>
+
+    <div class = "investment" *ngFor = "let investment of activeInvestments; let i = index">
+        
+        <div class = "investmentName">
+
+            Type of investment: {{ investment.investment_name }}
+
+        </div>
+
+        <div class = "investmentSum">
+
+            Expected income: {{ investment.amount_gained }}
+
+        </div>
+
+        <ng-template [ngIf] = "investment.minutes_seconds_remaining[1] >= 0 && investment.minutes_seconds_remaining[0] >= 0">
+
+            <ng-template [ngIf] = "investment.minutes_seconds_remaining[1] < 10">
+
+                <div class = "investmentDuration">
+
+                    Time Remaining: 0{{ investment.minutes_seconds_remaining[0] }} : 0{{ investment.minutes_seconds_remaining[1] }}
+        
+                </div>
+
+            </ng-template>
+
+            <ng-template [ngIf] = "investment.minutes_seconds_remaining[1] >= 10">
+
+                <div class = "investmentDuration">
+
+                    Time Remaining: 0{{ investment.minutes_seconds_remaining[0] }} : {{ investment.minutes_seconds_remaining[1] }}
+        
+                </div>
+
+            </ng-template>
+
+            <div class = "investmentType">
+
+                Income type: {{ investment. currency_type }}
+    
+            </div>
+
+            <button class = "endInvestment">LOCKED</button>
+
+        </ng-template>
+
+        <ng-template [ngIf] = "investment.minutes_seconds_remaining[0] < 0">
+
+            <ng-template [ngIf] = "investment.minutes_seconds_remaining[1] < 10">
+
+                <div class = "investmentDuration">
+
+                    Time Remaining: COMPLETED
+        
+                </div>
+
+            </ng-template>
+
+            <div class = "investmentType">
+
+                Income type: {{ investment. currency_type }}
+    
+            </div>
+
+            <button class = "endInvestment" (click)="completeInvestment(i)">Complete transaction</button>
+
+        </ng-template>
+
+    </div>
+
+</div>
